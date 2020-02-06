@@ -3,9 +3,9 @@ import socket
 from pyVmomi import vim
 from pyVim.connect import Disconnect, SmartStubAdapter, VimSessionOrientedStub
 from typing import List
-from vsanapiutils import WaitForTasks
+from esxi_cert_tool.vsanapiutils import WaitForTasks
 
-from utils import unverified_ssl_context
+from esxi_cert_tool.utils_ssl import unverified_ssl_context
 
 
 class VcClusterException(Exception):

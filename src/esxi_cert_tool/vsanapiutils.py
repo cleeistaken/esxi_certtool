@@ -20,7 +20,6 @@ from xml.dom import minidom
 
 from pyVmomi import vim, vmodl, SoapStubAdapter, VmomiSupport
 # Import the vSAN API python bindings
-import vsanmgmtObjects
 
 VSAN_API_VC_SERVICE_ENDPOINT = '/vsanHealth'
 VSAN_API_ESXI_SERVICE_ENDPOINT = '/vsan'
