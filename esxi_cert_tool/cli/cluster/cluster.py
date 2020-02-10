@@ -5,9 +5,9 @@ from cryptography.hazmat.backends import default_backend
 from cryptography import x509
 from cryptography.hazmat.primitives.serialization import load_pem_private_key
 
-from cert_tool_cluster import CertToolCluster
-from certtool_sddc import CertToolSddc
-from certtool_vc import CertToolVc
+from esxi_cert_tool.cert_tool_cluster import CertToolCluster
+from esxi_cert_tool.cert_tool_sddc import CertToolSddc
+from esxi_cert_tool.cert_tool_vc import CertToolVc
 from esxi_cert_tool.utils_certs import get_msca_root_cert
 
 

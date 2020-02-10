@@ -73,12 +73,12 @@ class CertToolVc(object):
         cert_list = result.stdout
 
         # Find number of certs
-        re_nb_certs = re.compile(r'Number of certificates:	(\d+)\r')
-        match = re_nb_certs.search(cert_list)
-        if match:
-            nb_certs = int(match.group(1))
-        else:
-            nb_certs = 0
+        # re_nb_certs = re.compile(r'Number of certificates:	(\d+)\r')
+        # match = re_nb_certs.search(cert_list)
+        # if match:
+        #    nb_certs = int(match.group(1))
+        # else:
+        #    nb_certs = 0
 
         # Find aliases
         cns = re_cn.findall(cert_list, re.MULTILINE)

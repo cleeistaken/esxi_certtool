@@ -8,10 +8,7 @@ from esxi_cert_tool.cli.generate import generate
 
 @click.group()
 @click.version_option(version=__version__)
-@click.pass_context
-def cli(ctx: dict = None):
-    if ctx is None:
-        ctx = {}
+def cli():
     click.echo(f'esxi_cert_tool v{__version__} ({__date__})')
 
 

@@ -190,7 +190,7 @@ def WaitForTasks(tasks, si):
     filterSpec = vmodl.query.PropertyCollector.FilterSpec()
     filterSpec.objectSet = objSpecs
     filterSpec.propSet = [propSpec]
-    filter = pc.CreateFilter(filterSpec, True)
+    filter_ = pc.CreateFilter(filterSpec, True)
 
     try:
         version, state = None, None
@@ -220,8 +220,8 @@ def WaitForTasks(tasks, si):
             # Move to next version
             version = update.version
     finally:
-        if filter:
-            filter.Destroy()
+        if filter_:
+            filter_.Destroy()
 
 
 # Get the VMODL version by checking the existence of vSAN namespace.

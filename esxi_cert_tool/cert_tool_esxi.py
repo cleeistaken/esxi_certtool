@@ -7,8 +7,7 @@ from fabric import Connection
 from pathlib import Path
 from time import sleep
 
-from esxi_cert_tool.utils import create_cert_config
-from esxi_cert_tool.utils_certs import get_msca_root_cert
+from esxi_cert_tool.utils_certs import get_msca_root_cert, create_cert_config
 from esxi_cert_tool.utils_connectivity import host_down, host_up
 
 
@@ -86,8 +85,8 @@ class CertToolEsxi(object):
         cert_chain_file = 'rui-chain.crt'
         cert_crt_bak_file = 'rui.crt.bak'
         cert_key_bak_file = 'rui.key.bak'
-        ca_crt_file = 'ca.crt'
-        ca_key_file = 'ca.key'
+        ca_crt_file = '../ca.crt'
+        ca_key_file = '../ca.key'
 
         # Create local paths
         local_cfg = cert_dir / cert_cfg_file
@@ -182,7 +181,7 @@ class CertToolEsxi(object):
         cert_chain_file = 'rui-chain.crt'
         cert_crt_bak_file = 'rui.crt.bak'
         cert_key_bak_file = 'rui.key.bak'
-        ca_crt_file = 'ca.crt'
+        ca_crt_file = '../ca.crt'
 
         # Create local paths
         local_cfg = cert_dir / cert_cfg_file
@@ -200,7 +199,7 @@ class CertToolEsxi(object):
         remote_crt = str(self.remote_tmp / cert_crt_file)
         remote_chain = str(self.remote_tmp / cert_chain_file)
         remote_key = str(self.remote_tmp / cert_key_file)
-        remote_ca_crt = str( self.remote_tmp / ca_crt_file)
+        remote_ca_crt = str(self.remote_tmp / ca_crt_file)
 
         # Get the Microsoft Certificate Authority file
         ca_crt = get_msca_root_cert(hostname=ca_server, username=ca_user, password=ca_pass)

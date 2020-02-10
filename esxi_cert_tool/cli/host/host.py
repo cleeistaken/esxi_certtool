@@ -5,7 +5,7 @@ from cryptography import x509
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.serialization import load_pem_private_key
 
-from cert_tool_esxi import CertToolEsxi
+from esxi_cert_tool.cert_tool_esxi import CertToolEsxi
 
 
 @click.group()
