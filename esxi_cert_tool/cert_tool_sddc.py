@@ -27,7 +27,7 @@ class CertToolSddc(object):
         self.verbose = verbose
 
         # Parameters
-        self.java_store = '/etc/alternatives/jre/esxi_cert_tool/security/cacerts'
+        self.java_store = '/etc/alternatives/jre/lib/security/cacerts'
         self.java_store_password = 'changeit'
         self.common_store = '/etc/vmware/vcf/commonsvcs/trusted_certificates.store'
         self.common_key = '/etc/vmware/vcf/commonsvcs/trusted_certificates.key'
