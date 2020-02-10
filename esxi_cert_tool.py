@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from lib.esxi_cert_tool.commands import cli
+from esxi_cert_tool.cli.commands import cli
 
 
 def main():
