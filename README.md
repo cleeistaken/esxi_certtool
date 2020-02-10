@@ -41,7 +41,7 @@ This commands checks to see if the Microsoft Certificate Authority root certific
 and vCenter, and adds the CA certificate if it is not in their keystore.
 
 ```shell script
-cli.py cluster msca [OPTIONS]
+Usage: esxi_cert_tool.py cluster msca [OPTIONS]
 Options:
   --sddc_server TEXT    SDDC server  [required] 
   --sddc_user TEXT      SDDC username  [required] 
@@ -68,7 +68,7 @@ Uses the provided CA certificate and key to generate and replace all the ESXi ho
 Checks to see if the CA certificate is installed in the SDDC manager and vCenter, and adds the CA certificate if it is
 not in their keystore.
 
-``` shell script
+```shell script
 Usage: esxi_cert_tool.py cluster selfsigned [OPTIONS]
 
 Options:
@@ -99,7 +99,7 @@ Used to generate certificates or signing requests.
 #### ca
 Generates a CA certificate and key.
 ```shell script
-Usage: cli.py generate ca [OPTIONS]
+Usage: esxi_cert_tool.py generate ca [OPTIONS]
 
 Options:
   --ca_crt PATH             Output file for the CA certificate
@@ -126,7 +126,7 @@ Generates a certificate signing requests for the ESXi host, uses the specified M
 the certificate, then installs the signed certificates on the host.
 
 ```shell script
-Usage: cli.py host msca [OPTIONS]
+Usage: esxi_cert_tool.py host msca [OPTIONS]
 
 Options:
   --esx-server TEXT     ESXi server  [required]
@@ -146,7 +146,7 @@ Options:
 Uses the provided CA certificate and key to generate and replace the ESXi host certificate.
 
 ```shell script
-Usage: cli.py host selfsigned [OPTIONS]
+Usage: esxi_cert_tool.py host selfsigned [OPTIONS]
 
 Options:
   --esx-server TEXT     ESXi server  [required]
