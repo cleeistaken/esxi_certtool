@@ -4,7 +4,7 @@ certsrv==2.1.1
 cffi==1.13.2
 chardet==3.0.4
 Click==7.0
-cryptography==2.8
+cryptography==3.2
 fabric==2.5.0
 idna==2.8
 invoke==1.4.0
